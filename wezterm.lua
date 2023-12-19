@@ -1,0 +1,37 @@
+local wezterm = require("wezterm")
+
+-- This table will hold the configuration.
+local config = {}
+
+if wezterm.config_builder then
+	config = wezterm.config_builder()
+end
+
+config.background = {
+	{
+		source = { File = wezterm.config_dir .. "/backdrops/saturn-devouring-sons.jpeg" },
+	},
+	-- {
+	-- 	-- source = { Color = colors.background },
+	-- 	height = "100%",
+	-- 	width = "100%",
+	-- 	opacity = 0.90,
+	-- },
+}
+
+config.font = wezterm.font("JetBrains Mono")
+config.color_scheme = "Catppuccin Mocha"
+
+config.enable_tab_bar = false
+
+-- config.window_background_opacity = 0.5
+
+config.keys = {
+	{
+		key = "r",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.ReloadConfiguration,
+	},
+}
+
+return config
