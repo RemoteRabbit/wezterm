@@ -19,7 +19,13 @@ config.background = {
 	-- },
 }
 
-config.font = wezterm.font("JetBrains Mono")
+-- config.font = wezterm.font("JetBrains Mono")
+-- config.font = wezterm.font("Fira Code")
+config.font = wezterm.font_with_fallback {
+  "FiraCode Nerd Font",
+  "JetBrainsMono Nerd Font",
+  "JetBrains Mono",
+}
 config.color_scheme = "Catppuccin Mocha"
 
 config.enable_tab_bar = false
