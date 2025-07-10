@@ -7,9 +7,13 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+config.default_prog = {'/bin/zsh', '-l'}
+
 config.background = {
 	{
-		source = { File = wezterm.config_dir .. "/backdrops/saturn-devouring-sons.jpeg" },
+		-- source = { File = wezterm.config_dir .. "/backdrops/saturn-devouring-sons.jpeg" },
+		source = { File = wezterm.config_dir .. "/backdrops/planets.jpg" },
+    opacity = 0.9,
 	},
 	-- {
 	-- 	-- source = { Color = colors.background },
@@ -30,7 +34,7 @@ config.color_scheme = "Catppuccin Mocha"
 
 config.enable_tab_bar = false
 
--- config.window_background_opacity = 0.5
+config.window_background_opacity = 0.5
 
 config.keys = {
 	{
