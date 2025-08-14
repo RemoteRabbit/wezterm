@@ -12,7 +12,7 @@ config.background = {
 	{
 		-- source = { File = wezterm.config_dir .. "/backdrops/saturn-devouring-sons.jpeg" },
 		source = { File = wezterm.config_dir .. "/backdrops/planets.jpg" },
-		opacity = 0.9,
+		opacity = 1,
 		horizontal_align = "Center",
 		vertical_align = "Middle",
 		hsb = {
@@ -25,9 +25,11 @@ config.background = {
 
 config.font = wezterm.font_with_fallback({
 	"FiraCode Nerd Font",
-	"JetBrainsMono Nerd Font",
-	"JetBrains Mono",
+	"Noto Color Emoji",
+	"Noto Sans Symbols",
+	"Noto Sans Symbols 2",
 })
+
 config.color_scheme = "Catppuccin Mocha"
 
 config.enable_tab_bar = false
